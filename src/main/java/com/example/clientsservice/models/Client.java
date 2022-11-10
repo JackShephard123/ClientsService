@@ -43,6 +43,9 @@ public class Client {
     )
     private Set<Account> accounts;
 
+    @OneToOne(fetch = FetchType.LAZY)
+    private Address address;
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
